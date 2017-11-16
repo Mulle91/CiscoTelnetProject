@@ -57,30 +57,34 @@ namespace Telnet
             Console.WriteLine("What device do you want to config");
             Console.WriteLine("1: R1 192.168.10.16 2: SW1 192.168.10.24 3: Both");
             bool runCommand = true;
-            while (runCommand) { }
+            while (runCommand)
+            {
                 try
                 {
                     int input = int.Parse(Console.ReadLine());
-                } catch
+                }
+                catch
                 {
                     Console.WriteLine("that's not an option");
                 }
-                if ( input == r1)
+                if (input == r1)
                 {
                     R1Config();
                     Console.WriteLine("Press any key too exit");
                     Console.ReadKey();
-                runCommand = false;
-                } else if ( input == sw1)
+                    runCommand = false;
+                }
+                else if (input == sw1)
                 {
-                runCommand = true;
+                    runCommand = true;
                     Sw1Config();
                     Console.WriteLine("Press any key too exit");
                     Console.ReadKey();
-                runCommand = false;
-                } else if ( input == both)
+                    runCommand = false;
+                }
+                else if (input == both)
                 {
-                runCommand = true;
+                    runCommand = true;
                     R1Config();
                     Console.WriteLine("så går vi videre til SW1");
                     Console.WriteLine("press anny key too continue");
@@ -88,8 +92,9 @@ namespace Telnet
                     Sw1Config();
                     Console.WriteLine("Press any key too exit");
                     Console.ReadKey();
-                runCommand = false;
+                    runCommand = false;
                 }
+            }
         }
     }
 }
