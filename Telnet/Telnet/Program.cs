@@ -32,8 +32,6 @@ namespace Telnet
                 Console.WriteLine("{0}: {1}", lineCounter, line);
                 lineCounter++;
             });
-            Console.WriteLine("Press any key to exit.");
-            Console.ReadKey();
         }
         public static void Sw1Config()
         {
@@ -49,8 +47,6 @@ namespace Telnet
                 Console.WriteLine("{0}: {1}", lineCounter, line);
                 lineCounter++;
             });
-            Console.WriteLine("Press any key to exit.");
-            Console.ReadKey();
         }
         public static int r1 = 1;
         public static int sw1 = 2;
@@ -60,7 +56,8 @@ namespace Telnet
         {
             Console.WriteLine("What device do you want to config");
             Console.WriteLine("1: R1 192.168.10.16 2: SW1 192.168.10.24 3: Both");
-            for (int i = 1; i < 4; i++) {
+            bool runCommand = true;
+            while (runCommand) { }
                 try
                 {
                     int input = int.Parse(Console.ReadLine());
@@ -71,18 +68,28 @@ namespace Telnet
                 if ( input == r1)
                 {
                     R1Config();
+                    Console.WriteLine("Press any key too exit");
+                    Console.ReadKey();
+                runCommand = false;
                 } else if ( input == sw1)
                 {
+                runCommand = true;
                     Sw1Config();
+                    Console.WriteLine("Press any key too exit");
+                    Console.ReadKey();
+                runCommand = false;
                 } else if ( input == both)
                 {
+                runCommand = true;
                     R1Config();
                     Console.WriteLine("så går vi videre til SW1");
                     Console.WriteLine("press anny key too continue");
                     Console.ReadKey();
                     Sw1Config();
+                    Console.WriteLine("Press any key too exit");
+                    Console.ReadKey();
+                runCommand = false;
                 }
-            }
         }
     }
 }
