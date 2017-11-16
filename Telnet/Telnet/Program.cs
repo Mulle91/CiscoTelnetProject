@@ -41,6 +41,17 @@ namespace Telnet
 
             T2 = new TelnetConnection("192.168.10.24", 23);
             //insert code here
+            T2.CiscoLogin("cisco");
+            T2.CiscoEnable("cisco");
+            T2.CiscoCommand("conf t");
+            T2.CiscoCommand("inter vlan 200");
+            T2.CiscoCommand("ip add 192.168.11.25 255.255.255.0");
+            T2.CiscoCommand("no shut");
+            T2.CiscoCommand("exit");
+            T2.CiscoCommand("inter ra fa0/5 - 7");
+            T2.CiscoCommand("switch access vlan 200");
+            T2.CiscoCommand("switch mode access");
+            T2.CiscoCommand("no shut");
             Result = T2.CiscoCommand("Show start");
             Result.ForEach(delegate (String line)
             {
