@@ -5,3 +5,10 @@ C:\Users\mulle\source\repos\Telnet\Telnet\obj\Debug\Telnet.csprojResolveAssembly
 C:\Users\mulle\source\repos\Telnet\Telnet\obj\Debug\Telnet.csproj.CoreCompileInputs.cache
 C:\Users\mulle\source\repos\Telnet\Telnet\obj\Debug\Telnet.exe
 C:\Users\mulle\source\repos\Telnet\Telnet\obj\Debug\Telnet.pdb
+C:\Users\Bruger\Documents\CiscoTelnetProject\Telnet\Telnet\bin\Debug\Telnet.exe.config
+C:\Users\Bruger\Documents\CiscoTelnetProject\Telnet\Telnet\bin\Debug\Telnet.exe
+C:\Users\Bruger\Documents\CiscoTelnetProject\Telnet\Telnet\bin\Debug\Telnet.pdb
+C:\Users\Bruger\Documents\CiscoTelnetProject\Telnet\Telnet\obj\Debug\Telnet.csprojResolveAssemblyReference.cache
+C:\Users\Bruger\Documents\CiscoTelnetProject\Telnet\Telnet\obj\Debug\Telnet.csproj.CoreCompileInputs.cache
+C:\Users\Bruger\Documents\CiscoTelnetProject\Telnet\Telnet\obj\Debug\Telnet.exe
+C:\Users\Bruger\Documents\CiscoTelnetProject\Telnet\Telnet\obj\Debug\Telnet.pdb
