@@ -41,8 +41,9 @@ namespace Telnet
             List<String> Result = new List<String>();
             int lineCounter = 1;
 
-            T2 = new TelnetConnection("192.168.10.16", 23);
+            T2 = new TelnetConnection("192.168.10.24", 23);
             //insert code here
+            Result = T2.CiscoCommand("Show start");
             Result.ForEach(delegate (String line)
             {
                 Console.WriteLine("{0}: {1}", lineCounter, line);
