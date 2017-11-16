@@ -87,7 +87,7 @@ namespace Telnet
                     runCommand = true;
                     R1Config();
                     Console.WriteLine("så går vi videre til SW1");
-                    Console.WriteLine("press anny key too continue");
+                    Console.WriteLine("press any key too continue");
                     Console.ReadKey();
                     Sw1Config();
                     Console.WriteLine("Press any key too exit");
