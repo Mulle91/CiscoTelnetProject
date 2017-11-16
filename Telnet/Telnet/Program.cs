@@ -51,24 +51,29 @@ namespace Telnet
         public static int r1 = 1;
         public static int sw1 = 2;
         public static int both = 3;
-        private static int input;
         static void Main(string[] args)
         {
             Console.WriteLine("What device do you want to config");
             Console.WriteLine("1: R1 192.168.10.16 2: SW1 192.168.10.24 3: Both");
             bool runCommand = true;
+            bool whatToConfig = true;
             while (runCommand)
             {
-                try
+                /*while (whatToConfig)
                 {
-                    int input = int.Parse(Console.ReadLine());
-                }
-                catch
-                {
-                    Console.WriteLine("that's not an option");
-                }
+                    try
+                    {*/
+                        int input = int.Parse(Console.ReadLine());
+                        //whatToConfig = false;
+                    /*}
+                    catch
+                    {
+                        Console.WriteLine("that's not an option");
+                    }
+                }*/
                 if (input == r1)
                 {
+                    Console.WriteLine("du har nu valgt router 1");
                     R1Config();
                     Console.WriteLine("Press any key too exit");
                     Console.ReadKey();
@@ -87,7 +92,7 @@ namespace Telnet
                     runCommand = true;
                     R1Config();
                     Console.WriteLine("så går vi videre til SW1");
-                    Console.WriteLine("press any key too continue");
+                    Console.WriteLine("press anny key too continue");
                     Console.ReadKey();
                     Sw1Config();
                     Console.WriteLine("Press any key too exit");
