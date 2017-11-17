@@ -36,7 +36,7 @@ namespace Telnet
         public static void Sw1Config()
         {
             TelnetConnection T2;
-            List<String> Result = new List<String>();
+            List<String> Result1 = new List<String>();
             int lineCounter = 1;
 
             T2 = new TelnetConnection("192.168.10.24", 23);
@@ -52,8 +52,8 @@ namespace Telnet
             T2.CiscoCommand("switch access vlan 200");
             T2.CiscoCommand("switch mode access");
             T2.CiscoCommand("no shut");
-            Result = T2.CiscoCommand("Show start");
-            Result.ForEach(delegate (String line)
+            Result1 = T2.CiscoCommand("do Show start");
+            Result1.ForEach(delegate (String line)
             {
                 Console.WriteLine("{0}: {1}", lineCounter, line);
                 lineCounter++;
@@ -83,7 +83,7 @@ namespace Telnet
                 else if (input == sw1)
                 {
                         Console.WriteLine("du har valgt SW1");
-                    runCommand = true;
+                    
                     Sw1Config();
                     Console.WriteLine("Press any key too exit");
                     Console.ReadKey();
